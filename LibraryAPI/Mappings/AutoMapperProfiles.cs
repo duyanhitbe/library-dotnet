@@ -1,4 +1,5 @@
 using AutoMapper;
+using LibraryAPI.DTO.Book;
 using LibraryAPI.DTO.Category;
 using LibraryAPI.Models;
 
@@ -10,5 +11,6 @@ public class AutoMapperProfiles : Profile
     {
         CreateMap<CreateCategoryDto, CategoryEntity>();
         CreateMap<UpdateCategoryDto, CategoryEntity>();
+        CreateMap<UpdateUserDto, UserEntity>();
     }
 }

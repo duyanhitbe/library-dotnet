@@ -1,5 +1,5 @@
 using AutoMapper;
-using LibraryAPI.DTO.Category;
+using LibraryAPI.DTO.Book;
 using LibraryAPI.Models;
 using LibraryAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;

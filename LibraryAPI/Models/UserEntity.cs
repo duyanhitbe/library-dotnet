@@ -1,14 +1,21 @@
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using LibraryAPI.Enums;
 
 namespace LibraryAPI.Models;
 
+[Table("users")]
 public class UserEntity : BaseEntity
 {
     [Column("username")]
-    public String Username { get; set; }
+    [JsonPropertyName("username")]
+    public string Username { get; set; }
+
     [Column("password")]
-    public String Password { get; set; }
+    [JsonIgnore]
+    public string Password { get; set; }
+
     [Column("role")]
+    [JsonPropertyName("role")]
     public UserRole Role { get; set; }
 }
